@@ -11,8 +11,10 @@ body{
   font-family: 'Outfit', sans-serif;
   font-size: 0.9375rem;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .QRcode-card__img img{
