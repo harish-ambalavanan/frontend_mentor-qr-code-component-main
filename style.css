@@ -1,0 +1,56 @@
+ *,
+ *::after,
+ *::before{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+body{
+  background-color: hsl(212, 45%, 89%);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9375rem;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.QRcode-card__img img{
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+.QRcode-card{
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  width: 85.33%;
+  /* margin: 27px; */
+  /* Ignored margin: 27px since I have used % for width. So it will be act responsively and add margin according to the width of viewport*/
+  border-radius: 1rem;
+}
+
+.QRcode-card__title{
+  font-weight: 700;
+  color: hsl(218, 44%, 22%);
+  text-align: center;
+}
+.QRcode-card__description{
+  font-weight: 400;
+  color: hsl(220, 15%, 55%);
+  text-align: center;
+}
+
+.QRcode-card__details{
+  /* background-color: pink; */
+  margin: 1.1875rem 0 1.4375rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+@media (min-width: 481px){
+  .QRcode-card{
+    max-width: 320px;
+  }
+}
