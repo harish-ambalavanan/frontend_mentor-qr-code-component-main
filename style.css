@@ -7,17 +7,21 @@
  }
 
 body{
-  background-color: hsl(212, 45%, 89%);
   font-family: 'Outfit', sans-serif;
   font-size: 0.9375rem;
-  height: 100vh;
+  position: relative;
+}
+
+.container{
+  background-color: hsl(212, 45%, 89%);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.QRcode-card__img img{
+.QRcode-card__img{
   max-width: 100%;
   border-radius: 0.75rem;
 }
@@ -27,12 +31,13 @@ body{
   padding: 1rem;
   width: 85.33%;
   /* margin: 27px; */
-  /* Ignored margin: 27px since I have used % for width. So it will be act responsively and add margin according to the width of viewport*/
+  /* Ignored margin: 27px since I have used % for width. So it will act responsively and add margin according to the width of viewport*/
   border-radius: 1rem;
 }
 
 .QRcode-card__title{
   font-weight: 700;
+  font-size: 1.40625rem;
   color: hsl(218, 44%, 22%);
   text-align: center;
 }
@@ -49,6 +54,18 @@ body{
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+}
+
+.attribution{
+  /* background-color: pink; */
+  text-align: center;
+  font-size: 0.79rem;
+  position: absolute;
+  bottom: 0.325rem;
+  width: 100%;
+}
+.attribution a{
+  color: hsl(220, 15%, 55%);
 }
 
 @media (min-width: 481px){
