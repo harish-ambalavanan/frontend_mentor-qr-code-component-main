@@ -14,7 +14,7 @@ body{
 
 .container{
   background-color: hsl(212, 45%, 89%);
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,9 +30,12 @@ body{
   background-color: hsl(0, 0%, 100%);
   padding: 1rem;
   width: 85.33%;
+  max-width: 320px;
   /* margin: 27px; */
   /* Ignored margin: 27px since I have used % for width. So it will act responsively and add margin according to the width of viewport*/
   border-radius: 1rem;
+  margin: 2rem 0;
+  /* using margin value for top and bottom to have a space between card and screen edge(top & bottom) for landscape mode in mobile*/
 }
 
 .QRcode-card__title{
@@ -41,6 +44,7 @@ body{
   color: hsl(218, 44%, 22%);
   text-align: center;
 }
+
 .QRcode-card__description{
   font-weight: 400;
   color: hsl(220, 15%, 55%);
@@ -57,19 +61,17 @@ body{
 }
 
 .attribution{
-  /* background-color: pink; */
-  text-align: center;
-  font-size: 0.79rem;
+  color: hsl(218, 44%, 22%);
   position: absolute;
-  bottom: 0.325rem;
-  width: 100%;
-}
-.attribution a{
-  color: hsl(220, 15%, 55%);
+  font-size: 0.79rem;
+  bottom: 0.2rem;
+  text-align: center;
+  /* width: 100%; */
+  /* If we use width: 100%, we can ignore left: 0; right: 0, since already using text-align: center */
+  left: 0;
+  right: 0;
 }
 
-@media (min-width: 481px){
-  .QRcode-card{
-    max-width: 320px;
-  }
+.attribution a{
+  color: hsl(220, 15%, 55%);
 }
