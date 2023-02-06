@@ -30,7 +30,6 @@ body{
   background-color: hsl(0, 0%, 100%);
   padding: 1rem;
   width: 85.33%;
-  max-width: 320px;
   /* margin: 27px; */
   /* Ignored margin: 27px since I have used % for width. So it will act responsively and add margin according to the width of viewport*/
   border-radius: 1rem;
@@ -74,4 +73,11 @@ body{
 
 .attribution a{
   color: hsl(220, 15%, 55%);
+}
+
+
+@media (min-width: 375px){
+  .QRcode-card{
+    max-width: 320px;
+  }
 }
